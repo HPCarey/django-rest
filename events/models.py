@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Event(models.Model):
@@ -23,7 +24,7 @@ class Event(models.Model):
     event_description = models.TextField(blank=True)
     date = models.DateField(null=True, blank=True)
     time = models.TimeField(null=True, blank=True)
-    country = models.Charfield(max_length=50)
+    country = models.CharField(max_length=50)
     location = models.CharField(max_length=255, blank=True)
     email = models.EmailField(null=True, blank=True)
     phone = models.CharField(max_length=50, null=True, blank=True)
